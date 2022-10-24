@@ -13,7 +13,7 @@ def cadastrar():
 	login_bdd = login_entry.get()
 	senha_bdd = senha_entry.get()
 	conf_senha_bd = conf_senha.get()
-	if senha_bdd == conf_senha_bd:
+	if senha_bdd == conf_senha_bd and login_bdd != "" and senha_bdd != "":
 		try:
 			banco = sqlite3.connect('banco.db')
 			cursor = banco.cursor()
@@ -29,8 +29,8 @@ def cadastrar():
 		except sqlite3.Error as erro:
 			print("Erro ao inserir os dados:",erro)
 	else:
-		messagebox.showinfo(title=" ",message= "As senhas digitadas estão diferentes")
-    
+		if login_bdd == "" and senha_bdd == "":
+			messagebox.showinfo(title=" ",message="Senha ou login com campos vazios")    
 def logar():
 	bd_l = l_entry.get()
 	bd_s = s_entry.get()
