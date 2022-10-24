@@ -8,7 +8,7 @@ nome_usuario = ""
 conf_senha = ""
 
 def cadastrar():
-	print("próximo passo")
+	
 	nome = nome_usuario.get()
 	login_bdd = login_entry.get()
 	senha_bdd = senha_entry.get()
