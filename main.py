@@ -50,17 +50,23 @@ def logar():
 		messagebox.showinfo(title=" ",message= "login ou senha incorretos")
  
 #janela main
+
+def modo_dark():
+	tb1.configure(bg="black")
+	tb2.configure(bg="black")
+
 window = Tk()
 window.title("Login")
 window.geometry("290x350")
-
 
 nb=ttk.Notebook(window)
 nb.place(x=0, y=0, width=500, height=350)
 
 tb1=Frame(nb)
 nb.add(tb1,text="tela de login")
+tb1.configure(bg="white")
 tb2=Frame(nb)
+tb2.configure(bg="white")
 nb.add(tb2,text="tela de cadastro")
 
 #descrição
@@ -110,6 +116,9 @@ conf_senha = Entry(tb2,text="",show="*",width=28)
 conf_senha.place(x=30,y=240)
 bt_cadastrar=Button(tb2,command=cadastrar,text='cadastrar',width=9,height=1)
 bt_cadastrar.place(x=30,y=270)
+
+botao_dark_white=Button(tb1,command=modo_dark,text="🌒",width=4,height=1)
+botao_dark_white.place(x=195,y=30)
 
 window.mainloop()
 
