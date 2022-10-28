@@ -1,4 +1,4 @@
-# Sistema de login e cadastro|python
+# Sistema de login e cadastro | python
 
 Sistema feito com python
 Utilizando da biblioteca tkinter(ttk) e o sqlite 3
