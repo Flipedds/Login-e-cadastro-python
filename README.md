@@ -1,14 +1,17 @@
-# tela de login
-Tela de login feita com python
-Utilizando da biblioteca tkinter e o sqlite 3
+# Sistema de login e cadastro|python
+
+Sistema feito com python
+Utilizando da biblioteca tkinter(ttk) e o sqlite 3
 
 
 
 
 
 
+![image](https://user-images.githubusercontent.com/110608654/198599756-7d858115-0b90-4731-9308-046214f44aff.png)
 
-![imagem](https://user-images.githubusercontent.com/110608654/197221554-d8d5bdc3-7a5f-421a-91c8-ebb6cdce5cf3.png)
 
 
-![imagem2](https://user-images.githubusercontent.com/110608654/197222278-654e1fc5-aa1f-451a-a12b-52e21c546649.png)
+
+
+![image](https://user-images.githubusercontent.com/110608654/198600177-a8d568ef-ffcf-47d8-bb58-df0b3d12fdc9.png)
