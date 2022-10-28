@@ -7,6 +7,7 @@ senha_entry = ""
 nome_usuario = ""
 conf_senha = ""
 
+
 def cadastrar():
 	
 	nome = nome_usuario.get()
@@ -55,9 +56,20 @@ def logar():
 		s_entry.delete(0, END)
 #janela main
 def modo_dark():
+				global botao_white
 				tela_login.configure(bg="black")
 				tela_cadastro.configure(bg="black")
+				botao_dark_white.place_forget()
+				botao_white = Button(tela_login,command=modo_light,text="☀",width=4,height=1)
+				botao_white.place(x=195,y=30)
 
+def modo_light():
+		global botao_white
+		tela_login.configure(bg="white")
+		tela_cadastro.configure(bg="white")
+		botao_white.place_forget()
+		botao_dark_white=Button(tela_login,command=modo_dark,text="🌒",width=4,height=1)
+		botao_dark_white.place(x=195,y=30)
 window = Tk()
 window.title("Login")
 window.geometry("290x350")
@@ -73,16 +85,16 @@ tela_cadastro.configure(bg="white")
 nb.add(tela_cadastro,text="tela de cadastro")
 
 #descrição
-topo = Label(tela_login,text='LOGIN',font=('Arial 12'))
+topo = Label(tela_login,text='LOGIN',font=('Arial 12'),bg="white")
 topo.place(x=30,y=30)
 #entrada login
-login = Label(tela_login,text="Usuário")
+login = Label(tela_login,text="Usuário",bg="white")
 login.place(x=30,y=90)
 l_entry = Entry(tela_login,text="",width=28)
 l_entry.place(x=30,y=120)
 
 #entrada senha
-senha = Label(tela_login,text="Senha")
+senha = Label(tela_login,text="Senha",bg="white")
 senha.place(x=30,y=150)
 
 s_entry = Entry(tela_login,text="",show="*",width=28)
@@ -96,24 +108,24 @@ button = Button(tela_login,text="Sair",command=window.destroy,width=25,height=1)
 button.place(x=30,y=268)
 #-----------------------#
 #------------------------#
-top = Label(tela_cadastro,text='preencha os campos abaixo para cadastrar um novo usuário',font=('Arial 7'))
+top = Label(tela_cadastro,text='preencha os campos abaixo para cadastrar um novo usuário',font=('Arial 7'),bg="white")
 top.place(x=0,y=10)
 	#-------------------------------------#
-usuario = Label(tela_cadastro,text="Digite o seu nome")
+usuario = Label(tela_cadastro,text="Digite o seu nome",bg="white")
 usuario.place(x=30,y=41)
 nome_usuario = Entry(tela_cadastro,text="",width=28)
 nome_usuario.place(x=30,y=63)
 #------------------------#
-cadastro_login = Label(tela_cadastro,text="Digite o login que deseja cadastrar")
+cadastro_login = Label(tela_cadastro,text="Digite o login que deseja cadastrar",bg="white")
 cadastro_login.place(x=30,y=90)
 login_entry = Entry(tela_cadastro,text=" ",width=28)
 login_entry.place(x=30,y=120)
 	#-------‐-------------------------#
-cadastro_senha = Label(tela_cadastro,text="Digite a senha que deseja cadastrar")
+cadastro_senha = Label(tela_cadastro,text="Digite a senha que deseja cadastrar",bg="white")
 cadastro_senha.place(x=30,y=150)
 senha_entry = Entry(tela_cadastro,text="",show="*",width=28)
 senha_entry.place(x=30,y=180)
-confirmacao_senha = Label(tela_cadastro,text="Confirme a senha")
+confirmacao_senha = Label(tela_cadastro,text="Confirme a senha",bg="white")
 confirmacao_senha.place(x=30,y=210)
 conf_senha = Entry(tela_cadastro,text="",show="*",width=28)
 conf_senha.place(x=30,y=240)
