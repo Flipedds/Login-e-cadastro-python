@@ -42,18 +42,21 @@ def logar():
 		banco.close()
 	except:
 		messagebox.showinfo(title=" ",message= "login ou senha incorretos")
-	if bd_s == (senha_bd[0][0]) and bd_l != "":
-		messagebox.showinfo(title=" ",message= "validação completa")
+	try:
+		if bd_s == (senha_bd[0][0]) and bd_l != "":
+			messagebox.showinfo(title=" ",message= "validação completa")
+			l_entry.delete(0, END)
+			s_entry.delete(0, END)
+		else:
+			messagebox.showinfo(title=" ",message= "login ou senha incorretos") 
+	except:
+		messagebox.showinfo(title=" ",message= "login ou senha incorretos")
 		l_entry.delete(0, END)
 		s_entry.delete(0, END)
-	else:
-		messagebox.showinfo(title=" ",message= "login ou senha incorretos")
- 
 #janela main
-
 def modo_dark():
-	tela_login.configure(bg="black")
-	tela_cadastro.configure(bg="black")
+				tela_login.configure(bg="black")
+				tela_cadastro.configure(bg="black")
 
 window = Tk()
 window.title("Login")
